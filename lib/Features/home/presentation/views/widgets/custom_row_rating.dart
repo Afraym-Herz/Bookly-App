@@ -3,30 +3,33 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomRowRating extends StatelessWidget {
-  const CustomRowRating({super.key});
+  const CustomRowRating({super.key , this.mainAxisAlignment = MainAxisAlignment.start });
 
+  final MainAxisAlignment mainAxisAlignment ;
   @override
   Widget build(BuildContext context) {
     return  Row(
-      children: [
-        const Icon(
+      mainAxisAlignment: mainAxisAlignment,
+      children: const [
+        Icon(
           FontAwesomeIcons.solidStar ,
           color: Color(0xffFFDD4F),
         ) ,
 
-        const SizedBox(height: 6.3,) ,
+        SizedBox(width: 6.3,) ,
 
-        const Text(
+        Text(
            "4.9" ,
            style : Styles.textStyle16 , 
         ),
-        const SizedBox(height: 5,) ,
-        Text(
-          "(2546)" ,
-          style: Styles.textStyle14.copyWith(
-            color : const Color(0xff707070) ,
-          ) ,
-          ) ,
+        SizedBox(width: 5,) ,
+        Opacity(
+          opacity: .5,
+          child: Text(
+            "(2546)" ,
+            style: Styles.textStyle14 , 
+            ),
+        ) ,
         
       ],
     );
