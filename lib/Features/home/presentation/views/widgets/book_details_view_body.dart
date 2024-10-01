@@ -2,6 +2,7 @@ import 'package:bookly_app/Features/home/presentation/views/widgets/custom_app_b
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_item.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_row_rating.dart';
+import 'package:bookly_app/features/home/presentation/views/widgets/row_actions_book.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -38,6 +39,8 @@ class BookDetailsViewBody extends StatelessWidget {
               ) , ),
             ) , 
           const CustomRowRating(mainAxisAlignment: MainAxisAlignment.center) , 
+          const SizedBox(height: 37,) ,
+          const RowActionsBook() , 
           ],
         ),
       ),
