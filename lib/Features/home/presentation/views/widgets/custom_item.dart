@@ -16,7 +16,6 @@ class CustomItem extends StatelessWidget {
             image: const DecorationImage(
                 image: AssetImage(AssetsData.test_image),
                  fit: BoxFit.fill , 
-                 
                  ),
           ),
         ),
