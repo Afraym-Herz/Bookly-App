@@ -14,10 +14,9 @@ class FeatureListViewItem extends StatelessWidget {
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8),
             child: CustomItem(),
-          ) ;
-        } ,
-        
-        ),
+          );
+        },
+      ),
     );
   }
 }

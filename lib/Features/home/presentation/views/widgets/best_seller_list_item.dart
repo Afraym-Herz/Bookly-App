@@ -58,7 +58,7 @@ class BestSellerListItem extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const Spacer() ,
+                    const Spacer(),
                     const CustomRowRating(),
                   ],
                 )

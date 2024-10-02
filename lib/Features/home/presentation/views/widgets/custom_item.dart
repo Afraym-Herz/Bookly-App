@@ -11,12 +11,12 @@ class CustomItem extends StatelessWidget {
       child: AspectRatio(
         aspectRatio: 2.6 / 4,
         child: Container(
-          decoration:  BoxDecoration(
+          decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(14),
             image: const DecorationImage(
-                image: AssetImage(AssetsData.test_image),
-                 fit: BoxFit.fill , 
-                 ),
+              image: AssetImage(AssetsData.test_image),
+              fit: BoxFit.fill,
+            ),
           ),
         ),
       ),

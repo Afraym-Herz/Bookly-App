@@ -11,25 +11,24 @@ class RowActionsBook extends StatelessWidget {
         Expanded(
           child: CustomButton(
             backgroundColor: Colors.white,
-             textColor: Colors.black,
-              text: r"19.99$" , 
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16) ,
-                bottomLeft: Radius.circular(16) ,
-              ),
-              ),
-        ) ,
+            textColor: Colors.black,
+            text: r"19.99$",
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16),
+              bottomLeft: Radius.circular(16),
+            ),
+          ),
+        ),
         Expanded(
-          child: CustomButton(
-            backgroundColor: Color(0xffEF8262),
-             textColor: Colors.white,
-              text: "Free Preview" ,
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16) ,
-                bottomLeft: Radius.circular(16) ,
-              ),
-               )
-           ) ,
+            child: CustomButton(
+          backgroundColor: Color(0xffEF8262),
+          textColor: Colors.white,
+          text: "Free Preview",
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(16),
+            bottomLeft: Radius.circular(16),
+          ),
+        )),
       ],
     );
   }

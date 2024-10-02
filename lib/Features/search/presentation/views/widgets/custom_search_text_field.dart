@@ -6,7 +6,7 @@ class CustomSearchTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  TextField(
+    return TextField(
       decoration: InputDecoration(
         hintText: "Search",
         enabledBorder: buildBorderRadius(),
@@ -23,6 +23,7 @@ class CustomSearchTextField extends StatelessWidget {
       ),
     );
   }
+
   OutlineInputBorder buildBorderRadius() {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
