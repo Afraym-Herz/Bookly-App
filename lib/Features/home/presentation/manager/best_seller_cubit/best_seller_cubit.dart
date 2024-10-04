@@ -11,7 +11,7 @@ class BestSellerCubit extends Cubit<BestSellerBooksState> {
 
   final HomeRepo homeRepo;
 
-  Future<void> fetchFeaturedBooks() async {
+  Future<void> fetchBestSellerBooks() async {
     emit(BestSellerBooksLoading());
 
     var result = await homeRepo.fetchBestSellerBooks();
