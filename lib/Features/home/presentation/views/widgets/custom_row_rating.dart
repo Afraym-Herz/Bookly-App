@@ -4,32 +4,32 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomRowRating extends StatelessWidget {
   const CustomRowRating(
-      {super.key, this.mainAxisAlignment = MainAxisAlignment.start});
-
+      {super.key, this.mainAxisAlignment = MainAxisAlignment.start, required this.rating, required this.count});
+  final int rating , count ;
   final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: mainAxisAlignment,
-      children: const [
-        Icon(
+      children:  [
+        const Icon(
           FontAwesomeIcons.solidStar,
           color: Color(0xffFFDD4F),
         ),
-        SizedBox(
+        const SizedBox(
           width: 6.3,
         ),
         Text(
-          "4.9",
+          '$rating',
           style: Styles.textStyle16,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         Opacity(
           opacity: .5,
           child: Text(
-            "(2546)",
+            "$count",
             style: Styles.textStyle14,
           ),
         ),
