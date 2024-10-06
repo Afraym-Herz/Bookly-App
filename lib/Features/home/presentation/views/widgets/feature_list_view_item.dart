@@ -1,4 +1,3 @@
-import 'package:bookly_app/Features/home/presentation/views/widgets/custom_item.dart';
 import 'package:bookly_app/core/utils/AppRouters.dart';
 import 'package:bookly_app/core/widgets/custom_circular_indicator.dart';
 import 'package:bookly_app/core/widgets/error_text.dart';
@@ -30,7 +29,7 @@ class FeatureListViewItem extends StatelessWidget {
                     GoRouter.of(context).push(AppRouters.kBookDetailsView); 
                   },
                   child: CustomBookImage(
-                   imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail ,
+                   imageUrl: state.books[index].volumeInfo.imageLinks?.thumbnail ?? '' ,
                   ),
                 ),
               );

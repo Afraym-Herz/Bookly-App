@@ -1,7 +1,6 @@
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_item.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_row_rating.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/row_actions_book.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.17),
           child:  CustomBookImage(
-            imageUrl: bookModel.volumeInfo.imageLinks.thumbnail ,
+            imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '' ,
           ),
         ),
         const SizedBox(
@@ -43,7 +42,7 @@ class BookDetailsSection extends StatelessWidget {
             ),
           ),
         ),
-        const CustomRowRating(mainAxisAlignment: MainAxisAlignment.center),
+        const CustomRowRating(mainAxisAlignment: MainAxisAlignment.center, count: 0 , rating:0 , ),
         const SizedBox(
           height: 37,
         ),
