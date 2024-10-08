@@ -28,6 +28,7 @@ class BookDetailsSection extends StatelessWidget {
           style: Styles.textStyle30.copyWith(
             fontWeight: FontWeight.bold,
           ),
+          textAlign: TextAlign.center,
         ),
         const SizedBox(
           height: 6,
@@ -46,7 +47,7 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 37,
         ),
-        const RowActionsBook(),
+         RowActionsBook(bookModel: bookModel,),
       ],
     );
   }
