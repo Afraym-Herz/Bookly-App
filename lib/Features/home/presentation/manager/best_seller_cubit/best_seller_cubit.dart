@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookly_app/features/home/data/repos/home_repo.dart';
+import 'package:bookly_app/features/home/data/repos/home_repo_impl.dart';
 import 'package:equatable/equatable.dart';
 
 import '../../../data/models/book_model/book_model.dart';
@@ -7,14 +7,14 @@ import '../../../data/models/book_model/book_model.dart';
 part 'best_seller_state.dart';
 
 class BestSellerCubit extends Cubit<BestSellerBooksState> {
-  BestSellerCubit(this.homeRepo) : super(BestSellerBookInitial());
+  BestSellerCubit(this.homeRepoImpl) : super(BestSellerBookInitial());
 
-  final HomeRepo homeRepo;
+  final HomeRepoImpl homeRepoImpl;
 
   Future<void> fetchBestSellerBooks() async {
     emit(BestSellerBooksLoading());
 
-    var result = await homeRepo.fetchBestSellerBooks();
+    var result = await homeRepoImpl.fetchBestSellerBooks();
 
     result.fold((failure) {
       emit(BestSellerBooksFailure(errMessage: failure.errMessage));

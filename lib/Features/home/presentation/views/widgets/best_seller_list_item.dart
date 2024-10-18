@@ -19,7 +19,7 @@ class BestSellerListItem extends StatelessWidget {
       },
       child: SizedBox(
         height: 125,
-        child: Row(
+        child: Row(// check
           children: [
             CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail ?? '' ),
             Expanded(
